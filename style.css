@@ -1,0 +1,454 @@
+body{
+    background-image: url(background1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .collections 
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .collections a
+  {
+    text-decoration: none;
+    color: black;
+    font-family: bolder;
+  }
+  
+  
+  .collections .one,.two,.three,.four,.five,.six,.seven,.eight,.nine,.ten
+  {
+    border:2px solid black;
+    padding:10px;
+    width:30%;
+    padding-bottom: 2%;
+    margin-left: 5px;
+    font-size: 30px;
+    background-image: url('ppt.jpg');
+    cursor: pointer;
+    
+  }
+  
+  
+  
+  .num
+  {
+    margin-top: 8%;
+    padding-left: 0px;
+    text-align: center;
+    
+  }
+  
+  
+  .videosection
+  {
+    width:90%;
+    height:82%;
+    
+    background-image: url('vijay1.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    margin-left: 5%;
+    margin-top: 2%;
+  }
+  
+   
+  
+  
+  /*head*/
+  .head
+  {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid black;
+    padding:5px;
+  }
+  
+  .head .title
+  {
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color:white;
+  }
+  
+  .timer
+  {
+   
+    font-size: 20px;
+    font-weight: bold;
+    color:purple;
+    margin-left: 90%;
+    background-color: white;
+    border-radius: 5px;
+    width: 30px;
+    height:25px;
+    text-align: center;
+    position: fixed;
+  }
+  
+  
+  
+  .question1
+  {
+    margin-top: 1%;
+    color:white;
+    font-weight: bold;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15%;
+  }
+  
+  /*video*/
+  
+  .videosection video
+  {
+      width: 70%;
+    height:60%;
+    margin-top: 2%;
+    margin-left: 15%;
+  
+  }
+  
+  /*option*/
+  .option
+  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+  }
+  
+  
+  
+  .option .optiona
+  {
+    width:19%;
+    background-color: rgb(250, 246, 250); 
+    color:purple;
+    font-weight: bold;
+    padding:10px;
+    margin-left: 22%;
+    border:2px solid purple;
+    border-radius: 5%;
+    text-align: center;
+  }
+  
+  .option .optionb
+  {
+    text-align: center;
+    width:19%;
+    margin-left:13%;
+    background-color: rgb(250, 246, 250);
+    color:purple;
+    font-weight: bold;
+    padding:10px;
+    border:2px solid purple;
+    border-radius: 5%;
+  }
+  
+  .optiona:hover
+  {
+    background-color: purple;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .optionb:hover{
+    background-color: purple;
+    color:white;
+    font-weight: bold;
+    cursor: pointer; 
+  }
+  
+  .option1
+  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.2%;
+  }
+  
+  .option1 .optionc
+  {
+    width:19%;
+    background-color: rgb(250, 246, 250);
+    color:purple;
+    font-weight: bold;
+    padding:10px;
+    margin-left: 22%;
+    border:2px solid purple;
+    border-radius: 5%;
+    text-align: center;
+  }
+  
+  .option1 .optiond
+  {
+    text-align: center;
+    width:19%;
+    margin-left:13%;
+    background-color: rgb(250, 246, 250);
+    color:purple;
+    font-weight: bold;
+    padding:10px;
+    border:2px solid purple;
+    border-radius: 5%;
+  }
+  
+  .optionc:hover
+  {
+    background-color: purple;
+    color:white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .optiond:hover{
+    background-color: purple;
+    color:white;
+    font-weight: bold;
+    cursor: pointer; 
+  }
+  
+  
+  .optionb.correct
+  {
+    background-color: green;
+  }
+  
+  
+  
+  /*secod section*/
+  .videosection img
+  {
+      width: 70%;
+    height:60%;
+    margin-top: 2%;
+    margin-left: 1%;
+  }
+  
+  
+  .message
+  {
+    margin-top: 2%;
+    margin-left: 28%;
+  }
+  
+  .message textarea
+  {
+    width:63%;
+    color:purple;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  
+  
+  /*third section*/
+  .videosection audio
+  {
+    width: 50%;
+    height:38%;
+    background-color: black;
+    margin-left: 25%;
+    padding:10px;
+    margin-top: 5%;
+   }
+  
+   #videopage3 .question1
+   {
+    margin-left: 25%;
+    padding-top: 20px;
+   }
+  
+   
+  
+  
+  
+   /*fifth section*/
+    .videosection img
+  {
+      width: 70%;
+    height:60%;
+    margin-top: 2%;
+    margin-left: 15%;
+  }
+  
+  
+  
+   
+  
+  /*submit*/
+  .submit
+  {
+    margin-top: 5%;
+    background-color: purple;
+    color: white;
+    width:10%;
+    text-align: center;
+    margin-left: 45%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  /*fourth section*/
+
+
+  #videopage4 .video1
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  #image12
+
+  {
+     
+     width:50%;
+    padding-left: 19%;
+  }
+
+  #address
+  {
+    margin-left: 35%;
+    margin-top:1%;
+  }
+ 
+  #videopage4 button
+  {
+    background-color: purple;
+    color:white;
+    margin-left: 45%;
+    margin-top:0%;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  /*eight section*/
+  .image1
+  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 3%;
+    cursor: pointer;
+  }
+  
+   .images1
+  {
+    width:30%;
+    height:20%;
+    margin-left: 25%;
+  }
+  
+  .images1 img
+  {
+    mix-blend-mode: hard-light;
+    height:190px;
+  }
+  
+  .images2
+  {
+    width:30%;
+    height:20%;
+    margin-left: 0%;
+  }
+  
+  .images2 img
+  {
+    mix-blend-mode: hard-light;
+    height:190px;
+    
+  }
+  
+  
+  /*second image section*/
+  .image2
+  {
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    cursor: pointer;
+  }
+  
+  
+  .images3
+  {
+    width:30%;
+    margin-left: 25%;
+  }
+  
+  .images3 img
+  {
+    mix-blend-mode: hard-light;
+    height:190px;
+  }
+  
+  .images4
+  {
+    width:30%;
+    height:20%;
+    margin-left: 0%;
+  }
+  
+  .images4 img
+  {
+    mix-blend-mode: hard-light;
+    height:190px;
+    
+  }
+  
+  
+  
+  /*ninth section*/
+  .match1
+  {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .value1,.value2
+  {
+    background-color: whitesmoke;
+    color:purple;
+    border: 1px solid purple;
+    width:15%;
+    padding-bottom: 2%;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 20px; 
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .value1
+  {
+    
+    margin-left: 30%;
+    
+  }
+  
+  .value2
+  {
+    margin-left: 7%;
+  }
+  
+  .submit a
+  {
+    text-decoration: none;
+    color:white;
+  }
+  
+  
+  #videopage1 a ,#videopage2 a ,#videopage3 a, #videopage4 a, #videopage5 a,#videopage6 a ,#videopage7 a,#videopage8 a,#videopage9 a,#videopage10 a     
+  {
+    text-decoration: none;
+    
+  }
+  
+  
+  
+  
+  
+  
+  

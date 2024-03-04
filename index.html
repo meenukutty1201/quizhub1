@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Hub</title>
+    <style>      
+    body{
+      background-image: url(ppt.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+      .quiz{
+        width:100%;
+        height:100%;
+      }
+     
+      .title button
+      {
+         border-radius: 5px;
+         font-weight: bold;
+         font-size: 20px;
+         color:white;
+         cursor: pointer;
+         cursor: pointer;
+        margin-top:6%;
+        margin-left:30%;
+        background-color: purple;
+        width:40%;
+        
+      }
+
+      
+     
+      a
+      {
+       text-decoration: none;
+       color:white;
+      }
+     
+      a:hover
+      {
+      color: white;
+      }
+
+      
+      .text
+      {
+         color: purple;
+         font-size: 30px;
+         font-weight: bold;
+         margin-top: 3%;
+         margin-left: 45%;
+      }
+
+      .text1
+      {
+         font-size: 20px;
+         font-weight: bold;
+         margin-top: 1%;
+         margin-left: 38%;
+      }
+      
+      .loginpage
+      {
+         border: 2px solid black;
+         width:30%;
+         height:45%;
+         margin-top: 3%;
+         margin-left: 35%;
+         border-radius: 5%;
+      }
+
+      .sign
+      {
+         margin-top: 3%;
+         margin-left: 40%;
+         font-size: 20px;
+        
+         font-weight: bold;
+      }
+
+       
+      .Login
+      {
+         margin-top: 8%;
+         margin-left: 36%;
+         font-size: 20px;
+         background-color: purple;
+         color:white;
+         width:120px;
+         border: 2px solid purple;
+         text-align: center;
+      }
+
+   
+
+   .container
+   {
+      display: flex;
+      flex-direction: column;
+   }
+
+
+   .container label
+   {
+      font-size: 20px;
+      margin-top: 5%;
+      margin-left: 30%;
+   }
+
+  .container input
+   {
+      width: 40%;
+      margin-top: 3%;
+      margin-left: 30% ;
+   }
+
+   hr{
+      border-width: 2px ;
+   }
+   
+   </style>
+</head>
+    <body>
+        <!--starting menu-->
+        <div class="quiz">
+            <div  class="title">
+                <div class="text">Welcome!</div>
+                <div class="text1">Play and know about Thalapathy Vijay.</div>
+
+                <!--login section-->
+                <div class="loginpage">
+                <div class="sign">SIGN UP</div>
+                <hr>
+
+
+                <div class="container">
+                <label for ="username">User Name:</label>
+               <input id="username" name="username" required  type="text"  title="5- 60 characters are only allowed">
+               <div class="error"></div>
+               </div>
+
+               
+
+               <button type="submit" class="Login" onclick="resgistration()" >START QUIZ</button>
+
+                </div>
+                
+               
+            </div>
+        </div>
+
+        <script>
+         function resgistration()
+         {
+         const username=document.getElementById('username').value;
+         
+         const form=document.getElementById('form');
+         if(username == '')
+         {  
+            alert("Fill Required Fields");
+            console.log("if");
+         }
+         else
+         {
+            alert('Complete the quiz within "100" seconds');
+            sessionStorage.setItem('Username', JSON.stringify(username));
+            window.location.href = "register.html";
+         }
+      }
+        </script>  
+        </body>
+        </html>
