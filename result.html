@@ -1,0 +1,420 @@
+<html>
+<head>
+    <title>Quiz Hub</title>
+    <style>
+        body
+        {
+            background-image: url('frontpage1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .result
+        {
+            background-color: white;
+            width:60%;
+            height: 95%;
+            margin-top: 2%;
+            margin-left: 20%;
+        }
+
+        .result .text
+        {
+            font-size: 30px;
+            padding-top: 5%;
+            
+            font-weight: bold;
+            font-family:cursive;
+            margin-left: 38% ;
+        }
+
+        #name
+        {
+            font-size: 30px;
+            color: purple;
+            font-weight: bold;
+            margin-top: 1%;
+            
+            width:40%;
+            text-align: center;
+            margin-left: 27%;
+        }
+        button
+        {
+            background-color: purple;
+            color:white;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-left: 43%;
+        }
+
+        button a
+        {
+            text-decoration: none;
+            color:white;
+        } 
+
+        #quizanswers8 img
+        {
+           width: 50x;
+           height:50px;
+           
+        }
+
+        .ansersshown
+        {
+            margin-top: 4%;
+            margin-left: 30%;
+            font-weight: bold;
+            
+        }
+
+        #quizanswers1,#quizanswers2,#quizanswers3,#quizanswers4,#quizanswers5,#quizanswers6,#quizanswers7,#quizanswers8,#quizanswers9,#quizanswers10
+        {
+            margin-bottom: 3.5%;
+            
+            width:25%;
+        }
+
+        #correct1
+        {
+            margin-left: 20%;
+           
+        }
+
+        #correct2
+        {
+            margin-left: 20%;
+        }
+
+        #correct10
+        {
+          margin-left: 20%;
+        }
+
+        #correct8
+        {
+            margin-left: 20%;
+            margin-top: 3%;
+        }
+
+        #correct4
+        {
+            margin-left: 20%;
+           
+        }
+
+        #correct9
+        {
+            margin-left: 20%;
+           
+        }
+
+        #correct7
+        {
+            margin-left: 20%;
+        }
+        #correct5
+        {
+            margin-left: 20%;
+        }
+
+        #correct3
+        {
+           margin-left: 20%;
+        }
+
+        #correct6
+        {
+            margin-left: 20%;
+        }
+
+        
+
+        .first,.second,.third,.four,.five,.six,.seven,.eight,.nine,.ten
+        {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        #score
+        {
+            font-weight: bold;
+            margin-left: 38%;
+            margin-top: 2%;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <div class="result">
+       
+        <div class="text">Congralutions!</div>
+        <div id="name"></div> 
+        <div id="score"></div>
+
+       <div class="ansersshown">
+
+       <div class="first">
+        <div id="quizanswers1"></div>
+        <div id="correct1"></div>
+        </div>
+
+        <div class="second">
+       <div id="quizanswers2"></div>
+       <div id="correct2"></div>
+        </div>
+
+        <div class="third">
+       <div id="quizanswers3"></div>
+       <div id="correct3"></div>
+        </div>
+
+        <div class="four">
+       <div id="quizanswers4">light</div>
+       <div id="correct4"></div>
+        </div>
+
+        <div class="five">
+       <div id="quizanswers5"></div>
+       <div id="correct5"></div>
+        </div>
+
+       <div class="six">
+       <div id="quizanswers6"></div>
+       <div id="correct6"></div>
+        </div>
+
+        <div class="seven">
+       <div id="quizanswers7"></div>
+       <div id="correct7"></div>
+        </div>
+
+        <div class="eight">
+       <div id="quizanswers8"></div>
+       <div id="correct8"></div>
+        </div>
+
+        <div class="nine">
+       <div id="quizanswers9"></div>
+       <div id="correct9"></div>
+        </div>
+
+        <div class="ten">
+       <div id="quizanswers10"></div>
+       <div id="correct10"></div>
+        </div>
+      </div>
+
+       <button><a href="index.html">Back To Home</a></button>
+    </div>
+
+    <script>
+        const user = localStorage.getItem('UserName');
+        
+        var sessionString = sessionStorage.getItem('answers');
+        var Answers = JSON.parse(sessionString);
+
+        console.log(user);
+        console.log(Answers);
+
+
+        var quizanswers1=Answers[0];
+        document.getElementById('quizanswers1').innerHTML=quizanswers1;
+    
+        var quizanswers2=Answers[1];
+        document.getElementById('quizanswers2').innerHTML=quizanswers2;
+
+        var quizanswers3=Answers[2];
+        document.getElementById('quizanswers3').innerHTML=quizanswers3;
+
+        var quizanswers4=Answers[9];
+        document.getElementById('quizanswers4').innerHTML=quizanswers4;
+
+        var quizanswers5=Answers[3];
+        document.getElementById('quizanswers5').innerHTML=quizanswers5;
+
+        var quizanswers6=Answers[4];
+        document.getElementById('quizanswers6').innerHTML=quizanswers6;
+
+        var quizanswers7=Answers[5];
+        document.getElementById('quizanswers7').innerHTML=quizanswers7;
+
+        var quizanswers8 = Answers[6];
+        document.getElementById('quizanswers8').innerHTML=quizanswers8;
+
+        var imgCheck = false;
+
+        if(Answers[6].includes("sura"))
+        {
+            imgCheck = true;
+        }
+        else
+        {
+            imgCheck = false;
+        }  
+
+        var quizanswers9=Answers[7];
+        document.getElementById('quizanswers9').innerHTML=quizanswers9;
+
+        var quizanswers10=Answers[8];
+        document.getElementById('quizanswers10').innerHTML=quizanswers10;
+
+        var nameuser=user;
+        document.getElementById('name').innerHTML=nameuser;
+
+        var score=0;
+        if(quizanswers1=="Shajahan")
+        {
+          document.getElementById('correct1').innerHTML="Correct"
+          correct1.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+        }
+
+        else
+        {
+            document.getElementById('correct1').innerHTML="Wrong"
+            correct1.style.color="red";
+        }
+
+
+        if(quizanswers2=="Appadi Podu")
+        {
+          document.getElementById('correct2').innerHTML="Correct"
+          correct2.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+
+        else
+        {
+            document.getElementById('correct2').innerHTML="Wrong"
+            correct2.style.color="red";
+        }
+
+        if(quizanswers3=="Thalaiva")
+        {
+          document.getElementById('correct3').innerHTML="Correct"
+          correct3.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+
+        else
+        {
+            document.getElementById('correct3').innerHTML="Wrong"
+            correct3.style.color="red";
+        } 
+
+
+        if(quizanswers4=="light" || quizanswers4=="Light" ||quizanswers4=="light,screen")
+        {
+          document.getElementById('correct4').innerHTML="Correct"
+          correct4.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+
+        else
+        {
+            document.getElementById('correct4').innerHTML="correct"
+            correct4.style.color="green";
+
+        }
+
+
+        if(quizanswers5=="5")
+        {
+          document.getElementById('correct5').innerHTML="Correct"
+          correct5.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+
+        else
+        {
+            document.getElementById('correct5').innerHTML="Wrong"
+            correct5.style.color="red";
+        }
+        
+
+        if(quizanswers6=="Misunderstading")
+        {
+          document.getElementById('correct6').innerHTML="Correct"
+          correct6.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+
+        else
+        {
+            document.getElementById('correct6').innerHTML="Wrong"
+            correct6.style.color="red";
+        }
+
+        if(quizanswers7=="Jeevanandham")
+        {
+          document.getElementById('correct7').innerHTML="Correct"
+          correct7.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+
+        else
+        {
+            document.getElementById('correct7').innerHTML="Wrong"
+            correct7.style.color="red";
+        }
+
+        if(imgCheck)    
+        {
+          document.getElementById('correct8').innerHTML="Correct";
+          correct8.style.color="green";
+          score++;
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+        }
+         else
+        {
+            document.getElementById('correct8').innerHTML="Wrong";
+            correct8.style.color="red";
+        } 
+
+
+        if(quizanswers9=="sneha")
+        {
+          document.getElementById('correct9').innerHTML="Correct"
+          correct9.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+        else
+        {
+            document.getElementById('correct9').innerHTML="Wrong"
+            correct9.style.color="red";
+
+        }
+
+        if(quizanswers10=="Varisu")
+        {
+          document.getElementById('correct10').innerHTML="Correct"
+          correct10.style.color="green";
+          score++
+          document.getElementById('score').innerHTML="Your score is"+" "+score+" "+"out of 10"
+
+        }
+        else
+        {
+            document.getElementById('correct10').innerHTML="Wrong"
+            correct10.style.color="red";
+        } 
+    </script>
+    </body>
+    </html>
